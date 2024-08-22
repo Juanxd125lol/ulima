@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjeta de Identificación con Barra Escáner</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+
+  .card {
+    width: 300px;
+    border: 2px solid #eee;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .name-section {
+    background-color: #c3e35f;
+    color: #e0670f;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: ;
+  }
+
+  .name-section p {
+    margin: 5px 0;
+  }
+
+  .photo {
+    margin-bottom: 10px;
+  }
+
+  .photo img {
+    width: 100px;
+    height: 120px;
+    border-radius: 5px;
+  }
+
+  .role {
+    color: #e0670f;
+    font-weight: ;
+    margin-bottom: 15px;
+  }
+
+  .barcode {
+    margin-top: 10px;
+  }
+
+  .barcode img {
+    width: %;
+  }
+
+  /* Barra Escáner */
+  .barra-escaner {
+    width: 100%; /* Se adapta al ancho de la tarjeta */
+    height: 10px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    animation: escanear 1s linear infinite;
+  }
+
+  @keyframes escanear {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="barra-escaner"></div>
+    <div class="logo">
+  <img src="https://i.ibb.co/YdLCwrC/Logo-ULima-pdf.jpg" alt="Logo-ULima-pdf" border="0">
+    </div>
+    <div class="name-section">
+      <p>DAVILA ASENJO</p>
+      <p>JUAN DIEGO ALEJANDRO</p>
+      <p>20191539</p>
+    </div>
+    <div class="photo">
+     <img src="https://i.ibb.co/HY9hkqM/054020191c582.jpg" alt="054020191c582" border="0"> 
+    </div>
+    <div class="role">ALUMNO</div>
+    <div class="barcode">
+     <img src="https://i.ibb.co/JkCf0bB/Captura-de-pantalla-2024-08-20-1.png" alt="Captura-de-pantalla-2024-08-20-1" border="0">
+    </div>
+  </div>
+</body>
+</html>
