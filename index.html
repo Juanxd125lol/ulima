@@ -2,81 +2,102 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Tarjeta de Identificación con Barra Escáner</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
   body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: white;
   }
 
   .card {
-    width: 300px;
-    border-radius: 30px;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-color: white;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 25px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  }
+
+  .top {
+    width: 100%;
   }
 
   .logo {
-    margin-bottom: 15px;
+    padding: 30px 0 20px;
   }
 
   .logo img {
-    width: 70px;
+    width: 90px;
   }
 
   .name-section {
     background-color: #b8d432;
     color: #e0670f;
-    padding: 12px 15px;
-    margin-bottom: 25px;
+    padding: 22px 20px;
+    width: 100%;
   }
 
   .name-section p {
-    margin: 4px 0;
+    margin: 6px 0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.2;
   }
 
   .name-section p.code {
-    font-size: 26px;
-    margin-top: 10px;
+    font-size: 34px;
+    margin-top: 14px;
   }
 
   .photo {
-    margin-bottom: 15px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
   }
 
   .photo img {
-    width: 160px;
-    height: 184px;
-    object-fit: cover;
-    border-radius: 6px;
+    width: 62vw;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .bottom {
+    width: 100%;
+    padding-bottom: 30px;
   }
 
   .role {
     color: #e0670f;
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 24px;
   }
 
   .barcode {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   .barcode img {
     width: 100%;
+    max-width: 500px;
   }
 
   /* Barra Escáner */
@@ -107,20 +128,24 @@
 <body>
   <div class="card">
     <div class="barra-escaner"></div>
-    <div class="logo">
-      <img src="assets/logo.jpg" alt="Logo Universidad de Lima">
-    </div>
-    <div class="name-section">
-      <p>FACUNDO DAVILA ANDY</p>
-      <p>SAHID HEBER</p>
-      <p class="code">20224753</p>
+    <div class="top">
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="Logo Universidad de Lima">
+      </div>
+      <div class="name-section">
+        <p>FACUNDO DAVILA ANDY</p>
+        <p>SAHID HEBER</p>
+        <p class="code">20224753</p>
+      </div>
     </div>
     <div class="photo">
       <img src="assets/photo.jpg" alt="Foto del alumno">
     </div>
-    <div class="role">ALUMNO</div>
-    <div class="barcode">
-      <img src="assets/barcode.jpg" alt="Código de barras">
+    <div class="bottom">
+      <div class="role">ALUMNO</div>
+      <div class="barcode">
+        <img src="assets/barcode.jpg" alt="Código de barras">
+      </div>
     </div>
   </div>
 </body>
